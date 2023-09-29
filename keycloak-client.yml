@@ -5,8 +5,6 @@ spring:
         jwt:
           issuer-uri: http://localhost:9089/auth/realms/Mini_Project_2
           jwk-set-uri: http://localhost:9089/auth/realms/Mini_Project_2/protocol/openid-connect/certs
-  application:
-    name: keycloak-client
 keycloak:
   realm: Mini_Project_2
   resource: microservices
@@ -20,3 +18,11 @@ keycloak:
 openapi:
   oAuthFlow:
     tokenUrl:http://localhost:9089/auth/realms/Mini_Project_2/protocol/openid-connect/token
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+logging:
+  level:
+    org.springframework.web: debug

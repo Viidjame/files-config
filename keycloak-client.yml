@@ -1,0 +1,22 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9089/auth/realms/Mini_Project_2
+          jwk-set-uri: http://localhost:9089/auth/realms/Mini_Project_2/protocol/openid-connect/certs
+  application:
+    name: keycloak-client
+keycloak:
+  realm: Mini_Project_2
+  resource: microservices
+  auth-server-url: http://localhost:9089/auth/ #docker container
+  credentials:
+    username: 'Vidijame'
+    password: 'Jame2023'
+    client-id: 'microservices'
+    secret: 'gqdVUB0xQf8pHt2ct44BunAj1709liTs'
+    provider: secret
+openapi:
+  oAuthFlow:
+    tokenUrl:http://localhost:9089/auth/realms/Mini_Project_2/protocol/openid-connect/token

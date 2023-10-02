@@ -35,7 +35,6 @@ openapi:
     port: 8282
     servlet:
       context-path: /
-  openapi:
     service:
       title: task-service
       version: 1.0.0

@@ -28,6 +28,10 @@ keycloak:
     client-id: 'microservices'
     secret: 'AfuKin6ruFbq4k01buU19IHa93l3VQPf'
     provider: secret
+server:
+  port: 8282
+  servlet:
+    context-path: /
 openapi:
   oAuthFlow:
     tokenUrl:http://localhost:9089/auth/realms/Mini_Project_2/protocol/openid-connect/token
@@ -40,10 +44,7 @@ openapi:
       path: /task-service/v3/api-docs
     swagger-ui:
       path: /task-service/swagger-ui.html
-server:
-  port: 8282
-  servlet:
-    context-path: /
+
 management:
   tracing:
     sampling:

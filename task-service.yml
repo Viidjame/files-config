@@ -31,15 +31,15 @@ keycloak:
 openapi:
   oAuthFlow:
     tokenUrl:http://localhost:9089/auth/realms/Mini_Project_2/protocol/openid-connect/token
-  service:
-    title: task-service
-    version: 1.0.0
-    url: http://localhost:8383
-  springdoc:
-    api-docs:
-      path: /task-service/v3/api-docs
-    swagger-ui:
-      path: /task-service/swagger-ui.html
+#  service:
+#    title: task-service
+#    version: 1.0.0
+#    url: http://localhost:8383
+#  springdoc:
+#    api-docs:
+#      path: /task-service/v3/api-docs
+#    swagger-ui:
+#      path: /task-service/swagger-ui.html
 management:
   tracing:
     sampling:
@@ -47,8 +47,5 @@ management:
 logging:
   level:
     org.springframework.web: debug
-server:
-    port: 8282
-    servlet:
-      context-path: /
+
 
